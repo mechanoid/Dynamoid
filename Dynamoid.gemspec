@@ -145,7 +145,24 @@ Gem::Specification.new do |s|
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('2.0.0')
+      s.add_runtime_dependency(%q<rails>, [">= 4.0.0beta1"])
+      s.add_runtime_dependency(%q<activemodel>, [">= 0"])
+      s.add_runtime_dependency(%q<tzinfo>, [">= 0"])
+      s.add_runtime_dependency(%q<aws-sdk>, [">= 0"])
+      s.add_runtime_dependency(%q<rails-observers>, [">= 0"])
+      s.add_runtime_dependency(%q<protected_attributes>, [">= 0"])
+      s.add_development_dependency(%q<rake>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<bundler>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<yard>, [">= 0"])
+      s.add_development_dependency(%q<redcarpet>, ["= 1.17.2"])
+      s.add_development_dependency(%q<github-markup>, [">= 0"])
+      s.add_development_dependency(%q<pry>, [">= 0"])
+      s.add_development_dependency(%q<fake_dynamo>, [">= 0"])
+      s.add_development_dependency(%q<mocha>, ["= 0.10.0"])
+    elsif Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0')
       s.add_runtime_dependency(%q<activemodel>, [">= 0"])
       s.add_runtime_dependency(%q<tzinfo>, [">= 0"])
       s.add_runtime_dependency(%q<aws-sdk>, [">= 0"])

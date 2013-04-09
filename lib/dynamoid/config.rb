@@ -1,6 +1,7 @@
 # encoding: utf-8
 require "uri"
 require "dynamoid/config/options"
+require 'rails/observers/activerecord/base'
 
 module Dynamoid
 

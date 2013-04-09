@@ -1,4 +1,6 @@
 # encoding: utf-8
+require 'rails/observers/activerecord/base'
+
 module Dynamoid
 
   # All modules that a Document is composed of are defined in this
@@ -18,7 +20,6 @@ module Dynamoid
 
     include ActiveModel::AttributeMethods
     include ActiveModel::Conversion
-    include ActiveModel::MassAssignmentSecurity
     include ActiveModel::Naming
     include ActiveModel::Observing
     include ActiveModel::Serializers::JSON
